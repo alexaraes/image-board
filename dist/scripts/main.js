@@ -21,13 +21,30 @@ $(document).ready(function (){
 		else {
 			console.log(newPhoto.validationError);
 		}
+
+		$('#form-div').slideUp();
 	});
 
 	addImage.on('add', function(model) {  
 		var imageHtml = newImageBuilder(model.attributes);
 		
 		$('#photo-div').append(imageHtml);
-		console.log('image added');
+
+		$('#photo-url').val(''),
+		$('#photo-caption-input').val('')
+	});
+
+	$('#menu-click').click(function(){    
+    	var showForm = $('#form-div');
+
+	    if(showForm.hasClass('active')){
+	        showForm.removeClass('active');
+	        showForm.slideUp();
+	    }else{
+	        showForm.addClass('active');
+	        showForm.slideDown();
+	    }
+
 	});
 
 });

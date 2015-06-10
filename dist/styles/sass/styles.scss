@@ -3,29 +3,31 @@
 #nav-div {
 	box-sizing: border-box;
 	height: 50px;
-	background-color: black;
-	margin-bottom: 30px;
+	background-color: #5e72c5;
+	margin-bottom: 40px;
 	position: relative;
 	padding-left: 10%;
 
 	#menu-div {
 		box-sizing: border-box;
-		height: 30px;
-		width: 30px;
-		background-color: blue;
+		height: 40px;
+		width: 40px;
+		background-color: #27276d;
 		position: absolute;
 		border-radius: 50px;
 		color: white;
 		text-align: center;
-		font-size: 30px;
-		margin-top: 10px;
+		font-size: 40px;
+		margin-top: 5px;
 	}
 }
 
 #form-div {
-	position: absolute;
 	height: 300px;
 	width: 100%;
+	text-align: center;
+	background-color: white;
+	display: none;
 }
 
 .photo-view, .photo-caption {
@@ -44,6 +46,25 @@
 }
 
 img {
-	height: 100%;
 	width: 100%;
+}
+
+input {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+	height: 40px;
+	width: 75%;
+	font-size: 20px;
+}
+
+button {
+	display: inline-block;
+	height: 40px;
+	width: 20%;
+	font-size: 25px;
+	border: none;
+	background-color: green;
+	color: white;
 }

@@ -5,7 +5,7 @@ var Photo = Backbone.Model.extend({
 	},
 
 	// validate: function(attr, options) {
-	// 	if(attr.picture.length == 0) {
+	// 	if(attr.picture == null || attr.picture.length == 0) {
 	// 		return 'You must enter a photo URL.';
 	// 	}
 	// 	else if(attr.caption.length == 0) {
