@@ -1,7 +1,19 @@
 $(document).ready(function (){
 
 	var addImage = new imageCollection();
-	addImage.fetch();
+	addImage.fetch({
+
+		success: function(imageCollection){
+            imageCollection.forEach(function(model){
+                $("#photo-div").append(newImageBuilder(model.attributes));
+                $("#photo-div").fadeIn(3000);
+            });
+            addImage.on("add", function(image){
+                $("#photo-div").prepend(newImageBuilder(image.attributes));
+                $("#photo-div").fadeIn(3000);
+            });
+        }
+    });
 
 	var newImageBuilder = _.template($('#photo-template').html());
 
@@ -25,14 +37,14 @@ $(document).ready(function (){
 
 	});
 
-	addImage.on('add', function(model) {  
-		var imageHtml = newImageBuilder(model.attributes);
+	// addImage.on('add', function(model) {  
+	// 	var imageHtml = newImageBuilder(model.attributes);
 		
-		$('#photo-div').append(imageHtml);
+	// 	$('#photo-div').append(imageHtml);
 
-		$('#photo-url').val(''),
-		$('#photo-caption-input').val('')
-	});
+	// 	$('#photo-url').val(''),
+	// 	$('#photo-caption-input').val('')
+	// });
 
 	$('#menu-click').click(function(){    
     	var showForm = $('#form-div');
