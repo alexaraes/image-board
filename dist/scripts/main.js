@@ -17,12 +17,12 @@ $(document).ready(function (){
 			addImage.add(newPhoto); 
 			newPhoto.save();
 			console.log(newPhoto);
+			$('#form-div').slideUp();
 		}
 		else {
 			console.log(newPhoto.validationError);
 		}
 
-		$('#form-div').slideUp();
 	});
 
 	addImage.on('add', function(model) {  
@@ -45,6 +45,10 @@ $(document).ready(function (){
 	        showForm.slideDown();
 	    }
 
+	});
+
+	$('#cancel').click(function () {
+		$('#form-div').slideUp();
 	});
 
 });
