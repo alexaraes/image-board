@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+	
+	<div id="nav-div">
+		<div id="menu-div">+</div>
+	</div>
+	<div id="form-div">
+		<form id="new-photo-form">
+			<input type="text" id="photo-url" placeholder="Image URL">
+			<input type="text" id="photo-caption-input" placeholder="Image Caption">
+			<button type="submit">Add Image</button>
+		</form>
+	</div>
+
+	<div id="photo-div">
+		
+	</div>
+
+	<script type="text/template" id="photo-template">
+		<div>
+			<div class="photo-view">
+				<img src='<%= picture %>'>
+			</div>
+			<div class="photo-caption"><%= caption %></div>
+		</div>
+	</script>
+
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+	<script type="text/javascript" src="bower_components/backbone/backbone-min.js"></script>
+
+	<script type="text/javascript" src="scripts/models/imageModel.js"></script>
+	<script type="text/javascript" src="scripts/collections/imageCollection.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>
