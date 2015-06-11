@@ -1,5 +1,5 @@
 body {
-  font-family: Futura, sans-serif;
+  font-family: Helvetica, sans-serif;
   background-color: #edeeef; }
 
 #nav-div {
@@ -20,12 +20,13 @@ body {
     margin-top: 3px; }
 
 #form-div {
+  box-sizing: border-box;
   height: 300px;
   width: 100%;
   text-align: center;
   background-color: white;
   display: none;
-  padding-top: 30px; }
+  padding-top: 70px; }
 
 .photo-view, .photo-caption {
   width: 80%;
@@ -39,10 +40,9 @@ body {
 
 .photo-caption {
   box-sizing: border-box;
-  height: 100px;
-  padding-top: 30px;
-  font-size: 30px;
-  margin-bottom: 50px; }
+  height: 75px;
+  padding-top: 20px;
+  font-size: 30px; }
 
 #photo-div {
   padding-top: 50px;
@@ -76,6 +76,19 @@ input {
   color: white;
   border-radius: 10px; }
 
+.comment-section {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 100px;
+  width: 70%; }
+  .comment-section .add-comment {
+    margin-bottom: 30px;
+    height: 50px;
+    width: 500px; }
+  .comment-section .comment-list {
+    margin-bottom: 30px;
+    padding-left: 150px; }
+
 #cancel {
   width: 10%;
   background-color: gray; }
@@ -86,7 +99,10 @@ input {
     width: 90%; }
 
   .photo-caption {
-    height: 150px;
-    width: 90%; } }
+    height: 100px;
+    width: 90%; }
+
+  .comment-section {
+    width: 80%; } }
 
 /*# sourceMappingURL=styles.css.map */

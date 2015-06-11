@@ -1,5 +1,5 @@
 body {
-	font-family: Futura, sans-serif;
+	font-family: Helvetica, sans-serif;
 	background-color: #edeeef;
 }
 
@@ -24,12 +24,13 @@ body {
 }
 
 #form-div {
+	box-sizing: border-box;
 	height: 300px;
 	width: 100%;
 	text-align: center;
 	background-color: white;
 	display: none;
-	padding-top: 30px;
+	padding-top: 70px;
 }
 
 .photo-view, .photo-caption {
@@ -46,10 +47,9 @@ body {
 
 .photo-caption {
 	box-sizing: border-box;
-	height: 100px;
-	padding-top: 30px;
+	height: 75px;
+	padding-top: 20px;
 	font-size: 30px;
-	margin-bottom: 50px;
 }
 
 #photo-div {
@@ -88,6 +88,24 @@ input {
 	border-radius: 10px;
 }
 
+.comment-section {
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 100px;
+	width: 70%;
+
+	.add-comment {
+		margin-bottom: 30px;
+		height: 50px;
+		width: 500px;
+	}
+
+	.comment-list {
+		margin-bottom: 30px;
+		padding-left: 150px;
+	}
+}
+
 #cancel {
 	width: 10%;
 	background-color: gray;
@@ -100,7 +118,11 @@ input {
 	}
 
 	.photo-caption {
-		height: 150px;
+		height: 100px;
 		width: 90%;
+	}
+
+	.comment-section {
+		width: 80%;
 	}
 }

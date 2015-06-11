@@ -32,15 +32,21 @@
 				<img src='<%= picture %>'>
 			</div>
 			<div class="photo-caption"><%= caption %></div>
+			<form class="comment-section">
+				<input type="text" class="add-comment" placeholder="Leave a Comment">
+				<div class="comment-list"><%= comment %></div>
+			</form>
 		</div>
 	</script>
 
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
 	<script type="text/javascript" src="bower_components/backbone/backbone-min.js"></script>
-
+	<script type="text/javascript" src="scripts/models/commentModel.js"></script>
+	<script type="text/javascript" src="scripts/collections/commentCollection.js"></script>
 	<script type="text/javascript" src="scripts/models/imageModel.js"></script>
 	<script type="text/javascript" src="scripts/collections/imageCollection.js"></script>
+	
 	<script type="text/javascript" src="scripts/main.js"></script>
 </body>
 </html>
